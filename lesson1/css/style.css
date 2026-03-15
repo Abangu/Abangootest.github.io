@@ -339,6 +339,11 @@ button {
   .video__chapter-play {
     margin-top: 0;
   }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
   /* Перенастройка ширины для мобильных */
   .counter__button_minus-edge,
   .counter__button_plus-edge {

@@ -246,7 +246,7 @@ button {
     /* Занимает 100% высоты окна браузера */
     height: 100vh;
     /* Улучшенный вариант для мобильных (учитывает панели браузера) */
-    height: 100dvh;
+    height: 100%;
 
     /* Убирает внешние и внутренние отступы по умолчанию */
     margin: 0;
@@ -256,7 +256,8 @@ button {
     overflow: hidden;
   }
   .container {
-    max-width: 380px;
+    max-width: 100%;
+
     background-color: #edcef7;
     flex-direction: column; /* Вариант: вертикальный список */
   }

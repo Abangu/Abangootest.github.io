@@ -14,128 +14,125 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__top">
-          <div class="logo">
-            <a a href="../index.html">
-              <img src="images/logo.png" alt="" />
-            </a>
-          </div>
-          <nav class="menu">
-            <ul class="menu__list">
-              <div class="info__check">
-                <p class="width__info" id="width-display">Ширина:</p>
-                <p class="height__info" id="height-display">Высота:</p>
-              </div>
-              <!-- <li><a href="../index.html">Home</a></li>
+      <div class="header__top">
+        <div class="logo">
+          <a a href="../index.html">
+            <img src="images/logo.png" alt="" />
+          </a>
+        </div>
+        <nav class="menu">
+          <ul class="menu__list">
+            <div class="info__check">
+              <p class="width__info" id="width-display">Ширина:</p>
+              <p class="height__info" id="height-display">Высота:</p>
+            </div>
+            <!-- <li><a href="../index.html">Home</a></li>
               <li><a href="#">Work</a></li> -->
-              <!-- <li><a href="#">About</a></li>
+            <!-- <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li> -->
-            </ul>
-          </nav>
-          <!-- <div class="header-btn">
+          </ul>
+        </nav>
+        <!-- <div class="header-btn">
             <a class="login" href="">login</a>
             <a class="sigh-up" href="">sign up</a>
           </div> -->
-        </div>
       </div>
     </header>
 
     <!-- ОСНОВА -->
-    <section class="video__chapter">
-      <div class="container">
-        <div class="info__lesson">
-          <p>Строка: <span id="output">0</span></p>
-          <p>
-            Количество строк:
-            <span id="lineCount"></span>
-          </p>
-        </div>
 
-        <div class="video__chapter-play">
-          <h1 id="myHeader"></h1>
-        </div>
-        <div class="video-container">
-          <video
-            id="myVideo"
-            controls
-            width="640"
-            height="360"
-            poster="Images/placeholder.jpeg"
+    <div class="container">
+      <div class="info__lesson">
+        <p>Строка: <span id="output">0</span></p>
+        <p>
+          Количество строк:
+          <span id="lineCount"></span>
+        </p>
+      </div>
+
+      <div class="video__chapter-play">
+        <h1 id="myHeader"></h1>
+      </div>
+      <div class="video-container">
+        <video
+          id="myVideo"
+          controls
+          width="640"
+          height="360"
+          poster="Images/placeholder.jpeg"
+        >
+          <source src="" type="video/webm" />
+          Ваш браузер не поддерживает встроенные видео.
+        </video>
+      </div>
+
+      <!-- Блок серфинга -->
+      <!-- ПОЛЕ ВВОДА -->
+
+      <div class="counter__input">
+        <input
+          class="open__txt-file"
+          type="number"
+          id="myInput"
+          oninput="readLineInput(this)"
+        />
+      </div>
+      <!-- ОБЛАСТЬ КНОПОК -->
+      <div class="operation__field">
+        <div class="counter" data-counter>
+          <button
+            id="left__button-edge"
+            class="counter__button counter__button_minus-edge"
+            onclick="readLineFirstButton()"
           >
-            <source src="" type="video/webm" />
-            Ваш браузер не поддерживает встроенные видео.
-          </video>
-        </div>
+            Перв
+          </button>
+          <!-- <div class="middle__buttons"> -->
+          <button
+            id="left__button"
+            class="counter__button counter__button_minus"
+            onclick="readLinePrevButton()"
+          >
+            Пред
+          </button>
 
-        <!-- Блок серфинга -->
-        <!-- ПОЛЕ ВВОДА -->
+          <button
+            id="rand__button"
+            class="counter__button counter__button_rand"
+            onclick="readLineRandButton()"
+          >
+            Произвольно
+          </button>
 
-        <div class="counter__input">
-          <input
-            class="open__txt-file"
-            type="number"
-            id="myInput"
-            oninput="readLineInput(this)"
-          />
-        </div>
-        <!-- ОБЛАСТЬ КНОПОК -->
-        <div class="operation__field">
-          <div class="counter" data-counter>
-            <button
-              id="left__button-edge"
-              class="counter__button counter__button_minus-edge"
-              onclick="readLineFirstButton()"
-            >
-              Перв
-            </button>
-            <!-- <div class="middle__buttons"> -->
-            <button
-              id="left__button"
-              class="counter__button counter__button_minus"
-              onclick="readLinePrevButton()"
-            >
-              Пред
-            </button>
-
-            <button
-              id="rand__button"
-              class="counter__button counter__button_rand"
-              onclick="readLineRandButton()"
-            >
-              Произвольно
-            </button>
-
-            <button
-              id="right__button"
-              class="counter__button counter__button_plus"
-              onclick="readLineButton()"
-            >
-              След
-            </button>
-            <!-- </div> -->
-            <button
-              id="right__button-edge"
-              class="counter__button counter__button_plus-edge"
-              onclick="readLineLastButton()"
-            >
-              Посл
-            </button>
-          </div>
-        </div>
-
-        <div class="button__play-wrap">
-          <button class="button__play" id="playBtn" onclick="playVideo()">
-            Воспроизвести
+          <button
+            id="right__button"
+            class="counter__button counter__button_plus"
+            onclick="readLineButton()"
+          >
+            След
+          </button>
+          <!-- </div> -->
+          <button
+            id="right__button-edge"
+            class="counter__button counter__button_plus-edge"
+            onclick="readLineLastButton()"
+          >
+            Посл
           </button>
         </div>
-
-        <div class="info__file">
-          <p id="outtest"></p>
-          <p id="output1"></p>
-        </div>
       </div>
-    </section>
+
+      <div class="button__play-wrap">
+        <button class="button__play" id="playBtn" onclick="playVideo()">
+          Воспроизвести
+        </button>
+      </div>
+
+      <div class="info__file">
+        <p id="outtest"></p>
+        <p id="output1"></p>
+      </div>
+    </div>
 
     <!-- Поменять номер скрипта на исходный 1. 3 - текстовой файл читается автоматически, но границы счёта не определены -->
     <script src="js/script.js"></script>

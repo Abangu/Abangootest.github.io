@@ -243,23 +243,28 @@ button {
 @media (max-width: 750px) and (min-width: 380px) {
   html,
   body {
-    /* Занимает 100% высоты окна браузера */
-    height: 100vh;
-    /* Улучшенный вариант для мобильных (учитывает панели браузера) */
-    height: 100%;
-
     /* Убирает внешние и внутренние отступы по умолчанию */
     margin: 0;
     padding: 0;
 
+    height: 100%;
+
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
   }
+  body {
+    display: flex;
+    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
+  }
+
+  .header {
+    background-color: #027424;
+  }
   .container {
-    max-width: 100%;
+    flex: 1;
+    max-height: 100%;
 
     background-color: #edcef7;
-    flex-direction: column; /* Вариант: вертикальный список */
   }
 
   h1 {

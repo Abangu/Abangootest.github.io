@@ -142,6 +142,7 @@ button {
 }
 
 .counter__input {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +221,7 @@ button {
   justify-content: center;
   gap: 50px;
 }
-
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 @media (max-width: 895px) and (min-width: 751px) {
   .container {
     max-width: 751px;
@@ -240,7 +241,7 @@ button {
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* Медиа-запрос для диапазона 650px - 500px */
-@media (max-width: 750px) and (min-width: 380px) {
+@media (max-width: 750px) and (min-width: 406px) and (max-height: 766px) {
   html,
   body {
     /* Убирает внешние и внутренние отступы по умолчанию */
@@ -258,13 +259,17 @@ button {
   }
 
   .header {
-    background-color: #027424;
+    background-color: #c871eb;
   }
   .container {
     flex: 1;
     max-height: 100%;
 
     background-color: #edcef7;
+  }
+
+  .video__chapter-play {
+    margin-top: 10px;
   }
 
   h1 {
@@ -312,7 +317,31 @@ button {
   }
 
   .button__play {
+    margin-top: 35px;
     width: 96%;
+  }
+
+  .info__file {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 405px) and (min-width: 392px) and (max-height: 658px) {
+  .video__chapter-play {
+    margin-top: 0;
+  }
+  /* Перенастройка ширины для мобильных */
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    margin-top: 0;
+  }
+
+  .button__play {
+    margin-top: 0;
+  }
+
+  .info__file {
+    margin-top: 0;
   }
 }
 @media (max-width: 379px) {

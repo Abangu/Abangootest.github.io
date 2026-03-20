@@ -129,6 +129,7 @@ button {
 
 .marquee-container {
   margin-top: -10px;
+  flex-direction: column;
   width: 1140px; /* Ограничение ширины */
   padding: 0 10px;
   /* border: 1px solid black; */
@@ -295,6 +296,7 @@ button {
   }
 
   .marquee-container {
+    flex-direction: column;
     width: 385px; /* Ограничение ширины */
     padding: 0 10px;
     overflow: hidden; /* Скрываем вышедший текст */
@@ -334,9 +336,7 @@ button {
   .marquee-container:hover .marquee-text {
     animation-play-state: paused;
   }
-  .video-container {
-    /* display: none; */
-  }
+
   video {
     /* width: auto; */
     height: 218px;

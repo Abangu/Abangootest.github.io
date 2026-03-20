@@ -61,7 +61,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   /* background-color: #b6eaff; */
-  background-color: #a8e66e;
+  background-color: #36bae2;
 }
 
 .menu__list {
@@ -302,6 +302,7 @@ button {
 
   .marquee-container {
     width: 385px; /* Ограничение ширины */
+    box-sizing: border-box;
   }
   .marquee-text {
     width: 385px;

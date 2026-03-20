@@ -124,7 +124,9 @@ button {
   justify-content: top;
   align-items: center;
 }
-
+.video__chapter-play {
+  flex-direction: column;
+}
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ */
 
 .marquee-container {
@@ -294,9 +296,10 @@ button {
     width: 406px;
     background-color: #82ecdb;
   }
-
-  .marquee-container {
+  .video__chapter-play {
     flex-direction: column;
+  }
+  .marquee-container {
     width: 385px; /* Ограничение ширины */
     padding: 0 10px;
     overflow: hidden; /* Скрываем вышедший текст */

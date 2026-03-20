@@ -434,8 +434,9 @@ button {
     /* Убирает внешние и внутренние отступы по умолчанию */
     margin: 0;
     padding: 0;
-    height: 766px;
-    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
+    /* height: 766px; */
+    height: 100%;
+    /* flex-direction: column; Элементы идут друг за другом сверху вниз */
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
   }
@@ -445,23 +446,18 @@ button {
   }
 
   .header {
-    background-color: #c871eb;
-    width: auto;
+    background-color: #05c7a7;
+    /* width: auto; */
   }
   .container {
-    flex: 1;
+    /* flex: 1; */
     height: 850px;
     width: 406px;
-    background-color: #edcef7;
-    align-items: center;
-    flex-direction: column;
+    background-color: #82ecdb;
   }
 
   .video__chapter-play {
     margin-top: 10px;
-    display: flex; /* Включаем flexbox */
-    justify-content: center; /* Горизонтальное центрирование */
-    align-items: center; /* Вертикальное центрирование */
   }
 
   .marquee-container {
@@ -471,12 +467,11 @@ button {
     width: 385px;
     font-size: 20px;
     font-weight: 600;
-    text-align: center;
   }
 
   .video-container {
     align-items: center;
-    height: auto;
+    height: 218px;
     justify-content: center;
   }
   video {

@@ -61,7 +61,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   /* background-color: #b6eaff; */
-  background-color: #97e236;
+  background-color: #eba6d4;
 }
 
 .menu__list {
@@ -179,8 +179,8 @@ button {
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ КОНЕЦ*/
 
 .video-container {
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   align-items: center;
   flex-direction: column;
 }
@@ -292,7 +292,7 @@ button {
   }
   .container {
     /* flex: 1; */
-    height: 850px;
+    height: 666px;
     width: 406px;
     background-color: #82ecdb;
   }
@@ -311,7 +311,7 @@ button {
     font-weight: 600;
   }
   .video-container {
-    display: none;
+    /* display: none; */
   }
   video {
     /* width: auto; */

@@ -179,7 +179,8 @@ button {
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ КОНЕЦ*/
 
 .video-container {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   flex-direction: column;
 }

@@ -61,7 +61,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
   /* background-color: #b6eaff; */
-  background-color: #36bae2;
+  background-color: #97e236;
 }
 
 .menu__list {
@@ -309,7 +309,9 @@ button {
     font-size: 20px;
     font-weight: 600;
   }
-
+  .video-container {
+    display: none;
+  }
   video {
     /* width: auto; */
     height: 218px;

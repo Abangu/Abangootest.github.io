@@ -6,28 +6,6 @@ const button = document.getElementById("playBtn");
 const display = document.getElementById("output");
 const display1 = document.getElementById("myHeader");
 
-window.addEventListener("load", function () {
-  // Ждем нажатия пользователя, так как браузеры
-  // блокируют авто-блокировку без действия
-  document.body.addEventListener(
-    "click",
-    function () {
-      if (screen.orientation && screen.orientation.lock) {
-        // Блокировка в портретном режиме
-        screen.orientation
-          .lock("portrait")
-          .then(function () {
-            console.log("Ориентация заблокирована");
-          })
-          .catch(function (error) {
-            console.error("Ошибка блокировки:", error);
-          });
-      }
-    },
-    { once: true },
-  ); // Сработает только один раз
-});
-
 function updateWidth() {
   const width = window.innerWidth;
   const height = window.innerHeight;
@@ -127,6 +105,7 @@ function readLineFirstButton() {
       document.getElementById("outtest").innerText = FfilePath;
       document.getElementById("output1").textContent =
         "video/" + input.value + ".webm";
+      runString();
     });
 }
 
@@ -148,6 +127,7 @@ function readLinePrevButton() {
       document.getElementById("outtest").innerText = FfilePath;
       document.getElementById("output1").textContent =
         "video/" + input.value + ".webm";
+      runString();
     });
 }
 
@@ -170,6 +150,7 @@ function readLineRandButton() {
       document.getElementById("outtest").innerText = FfilePath;
       document.getElementById("output1").textContent =
         "video/" + input.value + ".webm";
+      runString();
     });
 }
 
@@ -191,6 +172,7 @@ function readLineButton() {
       document.getElementById("outtest").innerText = FfilePath;
       document.getElementById("output1").textContent =
         "video/" + input.value + ".webm";
+      runString();
     });
 }
 
@@ -211,7 +193,32 @@ function readLineLastButton() {
       document.getElementById("outtest").innerText = FfilePath;
       document.getElementById("output1").textContent =
         "video/" + input.value + ".webm";
+      runString();
     });
+}
+
+function runString() {
+  // АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ
+  // 1. Получаем элемент
+  const p = document.getElementById("myHeader");
+  // 2. Извлекаем фактическое содержимое в переменную
+  const actualText = p.textContent;
+  console.log(
+    actualText + " " + p.scrollWidth + "/" + p.clientWidth + " " + p.classList,
+  );
+  p.classList.remove("animate");
+  if (p.scrollWidth > p.clientWidth) {
+    p.classList.add("animate");
+
+    // Автоматическое дублирование текста, если не хотите делать это в HTML
+    const content = document.querySelector(".marquee-text");
+    content.innerHTML += " " + content.innerHTML; // Удваиваем контент
+    // p.style.color = "blue";
+  } else {
+    p.classList.remove("animate");
+    // p.style.color = "yellow";
+  }
+  // АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ
 }
 
 button.addEventListener("click", function () {

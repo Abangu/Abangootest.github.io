@@ -63,7 +63,7 @@ button {
   padding-right: 15px;
   padding-bottom: 15px;
   /* background-color: #b6eaff; */
-  background-color: #b99cee;
+  background-color: #ee9cc9;
 }
 
 .menu__list {
@@ -291,10 +291,12 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    object-fit: contain;
+    height: 218px;
   }
   video {
-    /* width: auto; */
-    height: 218px;
+    max-width: auto;
+    max-height: 100%;
     object-fit: contain;
   }
 

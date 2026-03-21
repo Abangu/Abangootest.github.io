@@ -132,14 +132,14 @@ button {
 }
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ */
 
-.marquee-container {
+.string-container {
   margin-top: 10px;
   width: 1140px; /* Ограничение ширины */
   height: 120px;
   padding: 0 10px;
 }
 
-.marquee-text {
+.string-text {
   width: 1140px;
   font-size: 35px;
   font-weight: 800;
@@ -272,15 +272,15 @@ button {
     background-color: #82ecdb;
   }
 
-  .marquee-container {
-    display: flex;
-    justify-content: center;
+  .string-container {
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
     width: 385px; /* Ограничение ширины */
     height: 100px;
   }
-  .marquee-text {
+  .string-text {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -292,6 +292,7 @@ button {
   .video-container {
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   video {
     /* width: auto; */

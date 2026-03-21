@@ -42,13 +42,9 @@
     <!-- ОСНОВА -->
 
     <div class="container">
-      <div class="info__lesson">
+      <!-- <div class="info__lesson">
         <p>Строка: <span id="output">0</span></p>
-        <p>
-          Количество строк:
-          <span id="lineCount"></span>
-        </p>
-      </div>
+      </div> -->
       <div class="video__chapter-play">
         <div class="marquee-container">
           <p class="marquee-text" id="myHeader">
@@ -75,12 +71,17 @@
       <!-- ПОЛЕ ВВОДА -->
 
       <div class="counter__input">
+        <p><span>Строка: </span></p>
         <input
           class="open__txt-file"
           type="number"
           id="myInput"
           oninput="readLineInput(this)"
         />
+        <p>
+          из:
+          <span id="lineCount"></span>
+        </p>
       </div>
       <!-- ОБЛАСТЬ КНОПОК -->
       <div class="operation__field">
@@ -133,10 +134,10 @@
         </button>
       </div>
 
-      <div class="info__file">
+      <!-- <div class="info__file">
         <p id="outtest"></p>
         <p id="output1"></p>
-      </div>
+      </div> -->
     </div>
 
     <!-- Поменять номер скрипта на исходный 1. 3 - текстовой файл читается автоматически, но границы счёта не определены -->

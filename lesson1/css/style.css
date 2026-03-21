@@ -134,9 +134,8 @@ button {
   flex-direction: column;
   width: 1140px; /* Ограничение ширины */
   padding: 0 10px;
-  /* border: 1px solid black; */
-  overflow: hidden; /* Скрываем вышедший текст */
-  white-space: nowrap; /* Запрет переноса */
+  /* Сoverflow: hidden; крываем вышедший текст */
+  /* white-space: nowrap; Запрет переноса */
 }
 
 .marquee-text {
@@ -144,11 +143,8 @@ button {
   font-size: 35px;
   font-weight: 800;
   transition: color 0.3s; /* Плавное изменение цвета */
-  /* height: 19px;
-  Отсюда */
   display: inline-block; /* Позволяет заголовку быть шире контейнера */
   animation-play-state: paused; /* По умолчанию анимация остановлена */
-  /* color: rgb(5, 228, 105); */
   margin: 0;
   animation: none;
   text-align: center;

@@ -275,10 +275,14 @@ button {
   .marquee-container {
     display: flex;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
     width: 385px; /* Ограничение ширины */
     height: 100px;
   }
   .marquee-text {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     width: 385px;
     font-size: 20px;

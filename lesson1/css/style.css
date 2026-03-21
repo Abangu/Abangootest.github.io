@@ -296,6 +296,9 @@ button {
     flex-direction: column;
   }
   .marquee-container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 385px; /* Ограничение ширины */
     padding: 0 10px;
     overflow: hidden; /* Скрываем вышедший текст */

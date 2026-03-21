@@ -63,7 +63,7 @@ button {
   padding-right: 15px;
   padding-bottom: 15px;
   /* background-color: #b6eaff; */
-  background-color: #f0cdad;
+  background-color: #adddf0;
 }
 
 .menu__list {
@@ -144,7 +144,7 @@ button {
   font-size: 35px;
   font-weight: 800;
   margin: 0;
-  animation: none;
+
   text-align: center;
 }
 
@@ -245,190 +245,29 @@ button {
 }
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
-@media (max-width: 1185px) and (min-width: 895px) {
-  .container {
-    max-width: auto;
-    height: 853px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-  .marquee-container {
-    width: 870px; /* Ограничение ширины */
-    align-items: center;
-  }
-  .marquee-text {
-    width: 870px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .video-container {
-    width: auto;
-    height: auto;
-  }
-  video {
-    width: auto;
-    height: 480px;
-    object-fit: contain; /* Видео впишется полностью, без обрезки */
-    /* или object-fit: cover; - если нужно заполнить, обрезав края */
-  }
-}
-@media (max-width: 895px) and (min-width: 751px) {
-  body {
-    object-fit: contain;
-  }
-
-  .container {
-    max-width: auto;
-    height: 853px;
-    align-items: center;
-    text-align: center;
-    flex-direction: column; /* Вариант: вертикальный список */
-    background-color: #f0e3ad;
-  }
-
-  .marquee-container {
-    width: 720px; /* Ограничение ширины */
-  }
-  .marquee-text {
-    width: 720px;
-  }
-
-  .video-container {
-    height: auto;
-  }
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-@media (max-width: 750px) and (min-width: 650px) {
-  body {
-    object-fit: contain;
-  }
-  .container {
-    max-width: auto;
-    height: 853px;
-    align-items: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #e9cd7e;
-  }
-  .marquee-container {
-    width: 630px; /* Ограничение ширины */
-    align-items: center;
-  }
-  .marquee-text {
-    width: 630px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Видео впишется полностью, без обрезки */
-    /* или object-fit: cover; - если нужно заполнить, обрезав края */
-  }
-}
-
-@media (max-width: 649px) and (min-width: 407px) {
-  body {
-    object-fit: contain;
-  }
-
-  .container {
-    max-width: auto;
-    height: 853px;
-    align-items: center;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex: 1; /* Растягивается, занимая всё свободное место */
-    background-color: #7ee9e9;
-  }
-  .marquee-container {
-    width: 630px; /* Ограничение ширины */
-    align-items: center;
-  }
-  .marquee-text {
-    width: 630px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Видео впишется полностью, без обрезки */
-    /* или object-fit: cover; - если нужно заполнить, обрезав края */
-  }
-
-  .counter__button_minus-edge,
-  .counter__button_plus-edge {
-    order: 1; /* Опускает элементы вниз */
-  }
-  .counter__button_minus,
-  .rand__button,
-  .counter__button_plus {
-    order: 0; /* Оставляет наверху */
-  }
-
-  /* Перенастройка ширины для мобильных */
-  .counter__button_minus-edge,
-  .counter__button_plus-edge {
-    max-width: 26%; /* Элементы 1 и 5 под 2 и 4 */
-    margin-top: 10px;
-  }
-
-  .counter__button_minus-edge {
-    margin-right: auto;
-  }
-
-  .counter__button_minus,
-  .counter__button_plus {
-    width: 20%;
-  }
-
-  .counter__button_rand {
-    width: 35%;
-  }
-
-  .button__play {
-    margin-top: 35px;
-    width: 455px;
-  }
-}
-
-/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
-
 @media (max-width: 406px) and (max-height: 766px) {
   html,
   body {
+    /* Занимает 100% высоты окна браузера */
+    height: 100vh;
+    /* Улучшенный вариант для мобильных (учитывает панели браузера) */
+    height: 100dvh;
+
     /* Убирает внешние и внутренние отступы по умолчанию */
     margin: 0;
     padding: 0;
-    /* height: 766px; */
-    height: 100%;
-    /* flex-direction: column; Элементы идут друг за другом сверху вниз */
+
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
-  }
-  body {
-    display: flex;
-    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
   }
 
   .header {
     background-color: #05c7a7;
-    /* width: auto; */
   }
+
   .container {
     /* flex: 1; */
-    height: 850px;
+    height: 666px;
     width: 406px;
     background-color: #82ecdb;
   }
@@ -495,112 +334,3 @@ button {
     margin-top: 15px;
   }
 }
-
-@media (max-width: 384px) and (max-height: 695px) {
-  html,
-  body {
-    /* Убирает внешние и внутренние отступы по умолчанию */
-    margin: 0;
-    padding: 0;
-    height: 695px;
-    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
-    /* Запрещает прокрутку, если контент не помещается */
-    overflow: hidden;
-  }
-  body {
-    display: flex;
-    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
-  }
-
-  .header {
-    background-color: #c871eb;
-    width: auto;
-  }
-  .container {
-    height: 595px;
-    width: 384px;
-    background-color: #edcef7;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .video__chapter-play {
-    display: flex; /* Включаем flexbox */
-    justify-content: center; /* Горизонтальное центрирование */
-    align-items: center; /* Вертикальное центрирование */
-  }
-
-  .marquee-container {
-    height: 80px;
-    width: 360px; /* Ограничение ширины */
-  }
-  .marquee-text {
-    width: 360px;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .video-container {
-    align-items: center;
-    justify-content: center;
-  }
-  video {
-    width: auto;
-    height: 205px;
-    object-fit: contain;
-  }
-
-  .counter__button_minus-edge,
-  .counter__button_plus-edge {
-    order: 1; /* Опускает элементы вниз */
-  }
-  .counter__button_minus,
-  .rand__button,
-  .counter__button_plus {
-    order: 0; /* Оставляет наверху */
-  }
-
-  /* Перенастройка ширины для мобильных */
-  .counter__button_minus-edge,
-  .counter__button_plus-edge {
-    max-width: 25%; /* Элементы 1 и 5 под 2 и 4 */
-    margin-top: 0;
-  }
-
-  .counter__button_minus-edge {
-    margin-right: auto;
-  }
-
-  .counter__button_minus,
-  .counter__button_plus {
-    width: 20%;
-  }
-
-  .counter__button_rand {
-    width: 35%;
-  }
-
-  .button__play {
-    margin-top: 20px;
-    width: 355px;
-  }
-
-  .info__file {
-    margin-top: 5px;
-  }
-}
-
-/* @media (max-width: 405px) and (min-width: 392px) and (max-height: 766px) { */
-/* @media (max-width: 405px) and (min-width: 392px) and (max-height: 765px) {
-  html,
-  body {
-    display: none;
-  }
-} */
-/* @media (max-height: 765px) {
-  html,
-  body {
-    display: none;
-  }
-} */

@@ -56,12 +56,14 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 1170px;
+  height: 853px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 15px;
   /* background-color: #b6eaff; */
-  background-color: #74e2d3;
+  background-color: #f0cdad;
 }
 
 .menu__list {
@@ -124,74 +126,53 @@ button {
   justify-content: top;
   align-items: center;
 }
+
 .video__chapter-play {
   flex-direction: column;
 }
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ */
 
 .marquee-container {
-  margin-top: -10px;
-  flex-direction: column;
+  margin-top: 10px;
   width: 1140px; /* Ограничение ширины */
+  height: 120px;
   padding: 0 10px;
-  /* Сoverflow: hidden; крываем вышедший текст */
-  /* white-space: nowrap; Запрет переноса */
 }
 
 .marquee-text {
   width: 1140px;
   font-size: 35px;
   font-weight: 800;
-  transition: color 0.3s; /* Плавное изменение цвета */
-  display: inline-block; /* Позволяет заголовку быть шире контейнера */
-  animation-play-state: paused; /* По умолчанию анимация остановлена */
   margin: 0;
   animation: none;
   text-align: center;
 }
 
-/* Класс, который будет добавлять JS при переполнении, если текст длинный */
-.marquee-text.animate {
-  animation: marquee 10s linear infinite;
-  animation-play-state: running;
-  padding-left: 20%; /* Начинаем анимацию с конца контейнера за правой границей */
-  /* color: red; */
-}
-
-@keyframes marquee {
-  0% {
-    /* transform: translate(0, 0); */
-    transform: translateX(0);
-  }
-  100% {
-    /* transform: translate(-100%, 0); Двигает текст полностью влево */
-    transform: translateX(-100%); /* Двигает текст полностью влево */
-  }
-}
-
-.marquee-container:hover .marquee-text {
-  animation-play-state: paused;
-}
 /* АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ КОНЕЦ*/
 
 .video-container {
   display: flex;
-  /* display: none; */
   align-items: center;
   flex-direction: column;
 }
 
 .counter__input {
-  margin-top: 10px;
+  margin-top: 35px;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex: 0 0 30px;
+  gap: 10px;
   width: 100%;
 }
 
+.counter__input p {
+  margin: 0;
+  font-size: 20px;
+}
+
 .open__txt-file {
-  margin-top: 25px;
   width: 130px;
   user-select: none;
   padding: 25px 0 25px 0;
@@ -248,9 +229,10 @@ button {
 }
 
 .button__play {
-  margin-top: 30px;
+  margin-top: 15px;
   width: 605px;
   height: 40px;
+  box-sizing: border-box;
 }
 
 .info__file {
@@ -262,6 +244,164 @@ button {
   gap: 50px;
 }
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
+@media (max-width: 1185px) and (min-width: 895px) {
+  .container {
+    max-width: auto;
+    height: 853px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .marquee-container {
+    width: 870px; /* Ограничение ширины */
+    align-items: center;
+  }
+  .marquee-text {
+    width: 870px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .video-container {
+    width: auto;
+    height: auto;
+  }
+  video {
+    width: auto;
+    height: 480px;
+    object-fit: contain; /* Видео впишется полностью, без обрезки */
+    /* или object-fit: cover; - если нужно заполнить, обрезав края */
+  }
+}
+@media (max-width: 895px) and (min-width: 751px) {
+  body {
+    object-fit: contain;
+  }
+
+  .container {
+    max-width: auto;
+    height: 853px;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Вариант: вертикальный список */
+    background-color: #f0e3ad;
+  }
+
+  .marquee-container {
+    width: 720px; /* Ограничение ширины */
+  }
+  .marquee-text {
+    width: 720px;
+  }
+
+  .video-container {
+    height: auto;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+@media (max-width: 750px) and (min-width: 650px) {
+  body {
+    object-fit: contain;
+  }
+  .container {
+    max-width: auto;
+    height: 853px;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #e9cd7e;
+  }
+  .marquee-container {
+    width: 630px; /* Ограничение ширины */
+    align-items: center;
+  }
+  .marquee-text {
+    width: 630px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Видео впишется полностью, без обрезки */
+    /* или object-fit: cover; - если нужно заполнить, обрезав края */
+  }
+}
+
+@media (max-width: 649px) and (min-width: 407px) {
+  body {
+    object-fit: contain;
+  }
+
+  .container {
+    max-width: auto;
+    height: 853px;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Растягивается, занимая всё свободное место */
+    background-color: #7ee9e9;
+  }
+  .marquee-container {
+    width: 630px; /* Ограничение ширины */
+    align-items: center;
+  }
+  .marquee-text {
+    width: 630px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Видео впишется полностью, без обрезки */
+    /* или object-fit: cover; - если нужно заполнить, обрезав края */
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  /* Перенастройка ширины для мобильных */
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 26%; /* Элементы 1 и 5 под 2 и 4 */
+    margin-top: 10px;
+  }
+
+  .counter__button_minus-edge {
+    margin-right: auto;
+  }
+
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 20%;
+  }
+
+  .counter__button_rand {
+    width: 35%;
+  }
+
+  .button__play {
+    margin-top: 35px;
+    width: 455px;
+  }
+}
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
@@ -288,67 +428,31 @@ button {
   }
   .container {
     /* flex: 1; */
-    height: 666px;
+    height: 850px;
     width: 406px;
     background-color: #82ecdb;
   }
-  .video__chapter-play {
-    flex-direction: column;
-    overflow: hidden;
-  }
+
   .marquee-container {
-    align-items: center;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
     width: 385px; /* Ограничение ширины */
-    padding: 0 10px;
-    overflow: hidden; /* Скрываем вышедший текст */
-    white-space: nowrap; /* Запрет переноса */
-    box-sizing: border-box;
+    height: 100px;
   }
   .marquee-text {
+    text-align: center;
     width: 385px;
     font-size: 20px;
     font-weight: 600;
-    display: inline-block; /* Позволяет заголовку быть шире контейнера */
-    animation-play-state: paused; /* По умолчанию анимация остановлена */
-    /* color: rgb(5, 228, 105); */
-    margin: 0;
-    animation: none;
-    text-align: center;
-  }
-
-  /* Класс, который будет добавлять JS при переполнении, если текст длинный */
-  .marquee-text.animate {
-    animation: marquee 10s linear infinite;
-    animation-play-state: running;
-    padding-left: 20%; /* Начинаем анимацию с конца контейнера за правой границей */
-    /* color: red; */
-  }
-  @keyframes marquee {
-    0% {
-      /* transform: translate(0, 0); */
-      transform: translateX(0);
-    }
-    100% {
-      /* transform: translate(-100%, 0); Двигает текст полностью влево */
-      transform: translateX(-100%); /* Двигает текст полностью влево */
-    }
-  }
-
-  .marquee-container:hover .marquee-text {
-    animation-play-state: paused;
   }
 
   .video-container {
-    height: 210px;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
   }
-
   video {
-    width: auto;
-    height: 210px;
+    /* width: auto; */
+    height: 218px;
     object-fit: contain;
   }
 
@@ -391,3 +495,112 @@ button {
     margin-top: 15px;
   }
 }
+
+@media (max-width: 384px) and (max-height: 695px) {
+  html,
+  body {
+    /* Убирает внешние и внутренние отступы по умолчанию */
+    margin: 0;
+    padding: 0;
+    height: 695px;
+    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
+    /* Запрещает прокрутку, если контент не помещается */
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column; /* Элементы идут друг за другом сверху вниз */
+  }
+
+  .header {
+    background-color: #c871eb;
+    width: auto;
+  }
+  .container {
+    height: 595px;
+    width: 384px;
+    background-color: #edcef7;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .video__chapter-play {
+    display: flex; /* Включаем flexbox */
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+  }
+
+  .marquee-container {
+    height: 80px;
+    width: 360px; /* Ограничение ширины */
+  }
+  .marquee-text {
+    width: 360px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .video-container {
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    width: auto;
+    height: 205px;
+    object-fit: contain;
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+  }
+  .counter__button_minus,
+  .rand__button,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  /* Перенастройка ширины для мобильных */
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    max-width: 25%; /* Элементы 1 и 5 под 2 и 4 */
+    margin-top: 0;
+  }
+
+  .counter__button_minus-edge {
+    margin-right: auto;
+  }
+
+  .counter__button_minus,
+  .counter__button_plus {
+    width: 20%;
+  }
+
+  .counter__button_rand {
+    width: 35%;
+  }
+
+  .button__play {
+    margin-top: 20px;
+    width: 355px;
+  }
+
+  .info__file {
+    margin-top: 5px;
+  }
+}
+
+/* @media (max-width: 405px) and (min-width: 392px) and (max-height: 766px) { */
+/* @media (max-width: 405px) and (min-width: 392px) and (max-height: 765px) {
+  html,
+  body {
+    display: none;
+  }
+} */
+/* @media (max-height: 765px) {
+  html,
+  body {
+    display: none;
+  }
+} */

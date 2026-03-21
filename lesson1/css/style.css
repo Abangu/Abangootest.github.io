@@ -294,6 +294,7 @@ button {
   }
   .video__chapter-play {
     flex-direction: column;
+    overflow: hidden;
   }
   .marquee-container {
     align-items: center;
@@ -339,10 +340,16 @@ button {
     animation-play-state: paused;
   }
 
+  .video-container {
+    height: 210px;
+    align-items: center;
+    flex-direction: column;
+  }
+
   video {
-    /* width: auto; */
-    height: 218px;
-    /* object-fit: contain; */
+    width: auto;
+    height: 210px;
+    object-fit: contain;
   }
 
   .counter__button_minus-edge,

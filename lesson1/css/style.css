@@ -245,6 +245,9 @@ button {
 }
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 
+@media (max-width: 1220px) {
+}
+
 @media (max-width: 406px) {
   html,
   body {
@@ -273,6 +276,7 @@ button {
   }
 
   .string-container {
+    display: none;
     display: flex;
     justify-content: center;
 
@@ -288,6 +292,7 @@ button {
   }
 
   .video-container {
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -331,6 +336,7 @@ button {
   }
 
   .button__play {
+    display: none;
     margin-top: 35px;
     width: 90%;
   }

@@ -5,6 +5,8 @@ function goToPage() {
   if (name) {
     // 4. Формируем URL и переходим (например, page1.html)
     window.location.href = "lesson" + name + "/index.html";
+    let valPas = name;
+    sessionStorage.setItem("sharedData", valPas);
   } else {
     alert("Пожалуйста, введите имя страницы");
   }

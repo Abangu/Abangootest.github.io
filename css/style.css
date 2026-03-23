@@ -10,6 +10,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
+  /* Запрещает прокрутку, если контент не помещается */
+  overflow: hidden;
 }
 
 a {
@@ -29,6 +31,9 @@ a {
 }
 
 .header__top {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -114,4 +119,51 @@ a {
   border-radius: 8px;
   padding: 9px;
   text-align: center;
+}
+@media (max-width: 428px) and (min-width: 406px) {
+  html,
+  body {
+    /* Занимает 100% высоты окна браузера */
+    height: 100vh;
+    /* Улучшенный вариант для мобильных (учитывает панели браузера) */
+    height: 100dvh;
+
+    /* Убирает внешние и внутренние отступы по умолчанию */
+    margin: 0;
+    padding: 0;
+
+    /* Запрещает прокрутку, если контент не помещается */
+    overflow: hidden;
+  }
+
+  .width__info,
+  .height__info {
+    font-size: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 406px;
+    max-height: 666px;
+    margin-top: auto;
+    background-color: #a0f195;
+  }
+}
+@media (max-width: 384px) {
+  .width__info,
+  .height__info {
+    font-size: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 384px;
+    max-height: 595px;
+    margin-top: auto;
+    background-color: #a0f195;
+  }
 }

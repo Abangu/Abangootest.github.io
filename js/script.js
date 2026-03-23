@@ -9,3 +9,15 @@ function goToPage() {
     alert("Пожалуйста, введите имя страницы");
   }
 }
+function updateWidth() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  document.getElementById("width-display").innerText =
+    "Ширина страницы: " + width + "px";
+  document.getElementById("height-display").innerText =
+    "Высота страницы: " + height + "px";
+}
+
+// Запускаем при загрузке и при изменении размера
+window.addEventListener("resize", updateWidth);
+updateWidth(); // Первоначальный вызов

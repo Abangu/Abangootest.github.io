@@ -12,11 +12,6 @@ body {
   font-size: 15px;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 p {
   padding: 15px 0 15px 0;
 }
@@ -46,16 +41,6 @@ button {
   background-color: #fff;
   text-align: center;
 }
-.container {
-  display: flex;
-  flex-direction: column;
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #b6eaff;
-}
 
 .header__top {
   display: flex;
@@ -68,11 +53,6 @@ button {
   display: flex;
 }
 
-/* Применяется ко всем li, кроме первой */
-.menu__list li + li {
-  padding-left: 50px;
-}
-
 .width__info,
 .height__info {
   font-size: 20px;
@@ -81,41 +61,24 @@ button {
   text-align: center;
 }
 
-.login {
-  margin-right: 44px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.menu__list a {
-  opacity: 0.5;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.5s;
-}
-
-.menu__list a:hover {
-  opacity: 1;
-}
-
-.sigh-up {
-  text-transform: uppercase;
-  color: #250f8a;
-  font-weight: 600;
-  background-color: #fff;
-  padding: 8px 43px;
-  border-radius: 20px;
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #b6eaff;
 }
 
 /* СЛЕД  */
 
-.info__lesson {
+/* .info__lesson {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
+} */
 
 .operation__field {
   min-height: 850px;
@@ -133,12 +96,23 @@ button {
 }
 
 .counter__input {
-  flex: 0 0 30px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   width: 100%;
 }
 
+.counter__input p {
+  margin-top: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
 .open__txt-file {
-  margin-top: 25px;
   width: 130px;
   user-select: none;
   padding: 25px 0 25px 0;
@@ -208,12 +182,12 @@ button {
   align-items: center;
   margin-top: 5px;
 }
-.info__file p:first-child {
+/* .info__file p:first-child {
   margin-right: 50px;
-}
-.info__lesson p:first-child {
+} */
+/* .info__lesson p:first-child {
   margin-right: 20px;
-}
+} */
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* Медиа-запрос для диапазона 650px - 500px */
@@ -305,6 +279,15 @@ button {
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
   }
+
+  .width__info,
+  .height__info {
+    font-size: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+
   .container {
     max-width: 428px;
     max-height: 666px;
@@ -317,23 +300,19 @@ button {
   .video-container {
     align-items: center;
     justify-content: center;
-
   }
   video {
     margin-top: 5px;
-   	width: auto;
+    width: auto;
     max-height: 218px;
     object-fit: contain;
   }
 
   h1 {
-    margin-bottom: 5px;
-    font-size: 16px;
+    text-align: center;
+    margin: 15px 0 15px;
+    font-size: 20px;
     font-weight: 600;
-  }
-
-  .open__txt-file {
-    margin-top: 45px;
   }
 
   .counter {

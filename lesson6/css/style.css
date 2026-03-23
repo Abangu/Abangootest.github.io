@@ -75,14 +75,6 @@ button {
   background-color: #b6eaff;
 }
 
-/* СЛЕД  */
-
-/* .info__lesson {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
-
 .operation__field {
   min-height: 850px;
   flex-direction: column;
@@ -96,6 +88,10 @@ button {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+}
+
+.header__wrapper {
+  max-height: 100px;
 }
 
 .counter__input {
@@ -153,7 +149,7 @@ button {
 .rand__button,
 .counter__button_plus {
   flex-grow: 1.5;
-  background-color: lightgreen;
+  background-color: rgb(25, 175, 235);
 }
 
 .counter__button_plus-edge,
@@ -298,6 +294,10 @@ button {
     background-color: #a0f195;
   }
 
+  .header__wrapper {
+    max-height: 80px;
+  }
+
   h1 {
     text-align: center;
     margin: 30px 0 30px;
@@ -357,7 +357,7 @@ button {
     width: 380px;
   }
 }
-@media (max-width: 395px) {
+@media (max-width: 384px) {
   html,
   body {
     /* Занимает 100% высоты окна браузера */
@@ -372,34 +372,44 @@ button {
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
   }
+
+  .width__info,
+  .height__info {
+    font-size: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  }
+
   .container {
-    max-width: 392px;
-    max-height: auto;
+    max-width: 384px;
+    max-height: 595px;
     margin-top: auto;
     background-color: #a0f195;
   }
-  .operation__field {
-    padding-top: 5px;
-  }
-  .video-container {
-    width: auto;
-    height: auto;
-  }
-  video {
-    margin-top: 5px;
-    width: 100%;
-    height: 190px;
-    object-fit: contain;
+  .header__wrapper {
+    max-height: 80px;
   }
 
   h1 {
-    margin-bottom: 5px;
-    font-size: 16px;
+    text-align: center;
+    margin: 25px 0 25px;
+    font-size: 18px;
     font-weight: 600;
   }
+  .video-container {
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    margin-top: 5px;
+    width: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
 
-  .open__txt-file {
-    margin-top: 15px;
+  .counter__input {
+    margin-top: 20px;
   }
 
   .counter {
@@ -411,7 +421,8 @@ button {
     order: 1; /* Опускает элементы вниз */
     /* Перенастройка ширины для мобильных */
     margin-top: 10px;
-    max-width: 95px; /* Элементы 1 и 5 под 2 и 4 */
+    /* max-width: 115px;Элементы 1 и 5 под 2 и 4 */
+    max-width: 27%; /* Элементы 1 и 5 под 2 и 4 */
   }
   .counter__button_minus,
   .rand__button,
@@ -425,15 +436,18 @@ button {
 
   .counter__button_minus,
   .counter__button_plus {
-    max-width: 95px; /* Элементы 1 и 5 под 2 и 4 */
+    /* max-width: 110px; Элементы 1 и 5 под 2 и 4 */
+    width: 20%;
   }
 
   .counter__button_rand {
-    width: 130px;
+    /* max-width: 125px; */
+    width: 35%;
   }
+
   .button__play {
     margin-top: 30px;
-    width: 365px;
+    width: 355px;
   }
 }
 /* 360x668 */

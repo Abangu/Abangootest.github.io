@@ -52,7 +52,8 @@ button {
   justify-content: space-between;
   height: 100px;
   align-items: center;
-  background-color: #24b12b;
+
+  background-color: #b6eaff;
 }
 
 .menu__list {
@@ -290,6 +291,10 @@ p b span {
 
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
+  }
+
+  .header__top {
+    background-color: #24b176;
   }
 
   .width__info,

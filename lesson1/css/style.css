@@ -92,6 +92,7 @@ button {
 
 .header__wrapper {
   max-height: 100px;
+  overflow: hidden;
 }
 
 .counter__input {

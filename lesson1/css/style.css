@@ -23,6 +23,7 @@ h1 {
   margin: 35px 0 35px 0;
   font-size: 35px;
   font-weight: 800;
+  text-align: center;
 }
 
 video {
@@ -75,6 +76,14 @@ button {
   background-color: #b6eaff;
 }
 
+.header__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100px;
+  overflow: hidden;
+}
+
 .operation__field {
   min-height: 850px;
   flex-direction: column;
@@ -87,11 +96,6 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-}
-
-.header__wrapper {
-  max-height: 100px;
   overflow: hidden;
 }
 

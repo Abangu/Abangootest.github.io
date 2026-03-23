@@ -35,22 +35,20 @@
     <section class="video__chapter">
       <div class="container">
         <div class="operation__field">
-          <div class="video__chapter-play">
-            <div class="header__wrapper">
-              <h1 id="myHeader">Просмотр</h1>
-            </div>
-            <div class="video-container">
-              <video
-                id="myVideo"
-                controls
-                width="640"
-                height="360"
-                poster="images/placeholder.jpeg"
-              >
-                <source src="" type="video/webm" />
-                Ваш браузер не поддерживает встроенные видео.
-              </video>
-            </div>
+          <div class="header__wrapper">
+            <h1 id="myHeader">Просмотр</h1>
+          </div>
+          <div class="video-container">
+            <video
+              id="myVideo"
+              controls
+              width="640"
+              height="360"
+              poster="images/placeholder.jpeg"
+            >
+              <source src="" type="video/webm" />
+              Ваш браузер не поддерживает встроенные видео.
+            </video>
           </div>
 
           <!-- Блок серфинга -->
@@ -65,7 +63,7 @@
               oninput="readLineInput(this)"
             />
             <p>
-              Из:<b>
+              из:<b>
                 <span id="lineCount"></span>
               </b>
             </p>
@@ -91,7 +89,7 @@
 
             <button
               id="rand__button"
-              class="counter__button_rand"
+              class="counter__button counter__button_rand"
               onclick="readLineRandButton()"
             >
               Произвольно

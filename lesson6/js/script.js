@@ -2,8 +2,6 @@
 const input = document.getElementById("myInput");
 const myInput = parseInt(document.getElementById("myInput").value) - 1;
 const button = document.getElementById("playBtn");
-
-// const display = document.getElementById("output");
 const display1 = document.getElementById("myHeader");
 
 function updateWidth() {
@@ -81,10 +79,11 @@ input.addEventListener("input", async () => {
       display1.textContent = lines[maxValue - 1];
       document.getElementById("myInput").value = lines.length;
     }
-    document.getElementById("output1").textContent =
-      "video/" + input.value + ".webm";
+    // document.getElementById("output1").textContent =
+    //   "video/" + input.value + ".webm";
   } catch (error) {
     display1.textContent = "Ошибка: " + error.message;
+    // display1.textContent = lines[maxValue - 1];
   }
 });
 

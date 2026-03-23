@@ -14,11 +14,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -44,37 +39,12 @@ a {
   display: flex;
 }
 
-/* Применяется ко всем li, кроме первой */
-.menu__list li + li {
-  padding-left: 50px;
-}
-
-.login {
-  margin-right: 44px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.menu__list a {
-  opacity: 0.5;
-  color: #fff;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: all 0.5s;
-}
-
-.menu__list a:hover {
-  opacity: 1;
-}
-
-.sigh-up {
-  text-transform: uppercase;
-  color: #250f8a;
-  font-weight: 600;
-  background-color: #fff;
-  padding: 8px 43px;
-  border-radius: 20px;
+.width__info,
+.height__info {
+  font-size: 20px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* СЛЕД  */

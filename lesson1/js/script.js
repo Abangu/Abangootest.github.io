@@ -2,6 +2,7 @@
 const input = document.getElementById("myInput");
 const myInput = parseInt(document.getElementById("myInput").value) - 1;
 const button = document.getElementById("playBtn");
+
 // const display = document.getElementById("output");
 const display1 = document.getElementById("myHeader");
 
@@ -30,9 +31,9 @@ fetch(filePath)
     document.getElementById("lineCount").textContent = " " + maxVal;
     // display.textContent = 1; Строка: 1
     display1.textContent = lines[0];
-    document.getElementById("outtest").innerText = filePath;
-    document.getElementById("output1").textContent =
-      "video/" + input.value + ".webm";
+    // document.getElementById("outtest").innerText = filePath;
+    // document.getElementById("output1").textContent =
+    //   "video/" + input.value + ".webm";
   });
 
 // ПОЛУЧЕНИЕ ЗНАЧЕНИЯ СТРОКИ ТЕКСТОВОГО ФАЙЛа
@@ -101,9 +102,9 @@ function readLineFirstButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = 1;
       display1.textContent = Flines[0];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -122,9 +123,9 @@ function readLinePrevButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
       // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -144,9 +145,9 @@ function readLineRandButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = randomNumber;
       display1.textContent = Flines[randomNumber - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -165,9 +166,9 @@ function readLineButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
       // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -185,9 +186,9 @@ function readLineLastButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = FmaxVal;
       display1.textContent = Flines[FmaxVal - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 

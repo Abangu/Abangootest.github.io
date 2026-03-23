@@ -20,7 +20,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin: 35px 0 35px 0;
   font-size: 35px;
   font-weight: 800;
 }
@@ -43,6 +43,9 @@ button {
 }
 
 .header__top {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -294,8 +297,12 @@ button {
     margin-top: auto;
     background-color: #a0f195;
   }
-  .operation__field {
-    padding-top: 5px;
+
+  h1 {
+    text-align: center;
+    margin: 30px 0 30px;
+    font-size: 20px;
+    font-weight: 600;
   }
   .video-container {
     align-items: center;
@@ -308,15 +315,12 @@ button {
     object-fit: contain;
   }
 
-  h1 {
-    text-align: center;
-    margin: 15px 0 15px;
-    font-size: 20px;
-    font-weight: 600;
+  .counter__input {
+    margin-top: 40px;
   }
 
   .counter {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
   .counter__button_minus-edge,
@@ -324,7 +328,8 @@ button {
     order: 1; /* Опускает элементы вниз */
     /* Перенастройка ширины для мобильных */
     margin-top: 10px;
-    max-width: 115px; /* Элементы 1 и 5 под 2 и 4 */
+    /* max-width: 115px;Элементы 1 и 5 под 2 и 4 */
+    max-width: 27%; /* Элементы 1 и 5 под 2 и 4 */
   }
   .counter__button_minus,
   .rand__button,
@@ -338,11 +343,13 @@ button {
 
   .counter__button_minus,
   .counter__button_plus {
-    max-width: 110px; /* Элементы 1 и 5 под 2 и 4 */
+    /* max-width: 110px; Элементы 1 и 5 под 2 и 4 */
+    width: 20%;
   }
 
   .counter__button_rand {
-    max-width: 125px;
+    /* max-width: 125px; */
+    width: 35%;
   }
 
   .button__play {

@@ -14,6 +14,7 @@ body {
 
 p {
   padding: 15px 0 15px 0;
+  color: #000;
 }
 
 h1 {
@@ -51,6 +52,8 @@ button {
   justify-content: space-between;
   height: 100px;
   align-items: center;
+
+  background-color: #b6eaff;
 }
 
 .menu__list {
@@ -69,6 +72,7 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 1170px;
+  min-height: 850px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -76,26 +80,18 @@ button {
   background-color: #b6eaff;
 }
 
+.operation__field {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   max-height: 100px;
-  overflow: hidden;
-}
-
-.operation__field {
-  min-height: 850px;
-  flex-direction: column;
-  display: flex;
-  justify-content: top;
-  align-items: center;
-}
-
-.video__chapter-play {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -123,6 +119,12 @@ button {
   font-size: 25px;
   font-weight: 600;
 }
+
+p b span {
+  color: rgb(92, 92, 92);
+  font-size: 24px;
+}
+
 .counter {
   display: flex;
   flex-wrap: wrap; /* Разрешаем перенос */
@@ -148,18 +150,18 @@ button {
 .counter__button_minus-edge,
 .counter__button_plus-edge {
   flex-grow: 1;
-  background-color: lightcoral;
+  width: 80px;
+  background-color: rgb(140, 222, 255);
 }
 .counter__button_minus,
-.rand__button,
 .counter__button_plus {
   flex-grow: 1.5;
-  background-color: rgb(25, 175, 235);
+  background-color: rgb(140, 222, 255);
 }
-
-.counter__button_plus-edge,
-.counter__button_minus-edge {
-  width: 80px;
+.counter__button_rand {
+  width: 165px;
+  flex-grow: 1.5;
+  background-color: rgb(140, 222, 255);
 }
 
 .counter__input input {
@@ -170,28 +172,30 @@ button {
   text-align: center;
 }
 
-.counter__button_rand {
-  width: 165px;
-}
-
 .button__play {
   margin-top: 30px;
   width: 610px;
   height: 40px;
+  background-color: rgb(100, 204, 245);
 }
 
-.info__file {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 5px;
+.counter__button_minus-edge:hover,
+.counter__button_plus-edge:hover,
+.counter__button_minus:hover,
+.counter__button_rand:hover,
+.counter__button_plus:hover,
+.button__play:hover {
+  background-color: rgb(172, 228, 250);
 }
-/* .info__file p:first-child {
-  margin-right: 50px;
-} */
-/* .info__lesson p:first-child {
-  margin-right: 20px;
-} */
+
+.counter__button_minus-edge:active,
+.counter__button_plus-edge:active,
+.counter__button_minus:active,
+.counter__button_rand:active,
+.counter__button_plus:active,
+.button__play:active {
+  background-color: rgb(172, 228, 250);
+}
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
 /* Медиа-запрос для диапазона 650px - 500px */
@@ -284,6 +288,10 @@ button {
     overflow: hidden;
   }
 
+  .header__top {
+    background-color: #24b176;
+  }
+
   .width__info,
   .height__info {
     font-size: 15px;
@@ -328,6 +336,14 @@ button {
     margin-top: 25px;
   }
 
+  .counter:hover {
+    opacity: 0.8;
+  }
+
+  .counter:active {
+    opacity: 0.6;
+  }
+
   .counter__button_minus-edge,
   .counter__button_plus-edge {
     order: 1; /* Опускает элементы вниз */
@@ -337,19 +353,10 @@ button {
     max-width: 27%; /* Элементы 1 и 5 под 2 и 4 */
   }
   .counter__button_minus,
-  .rand__button,
   .counter__button_plus {
     order: 0; /* Оставляет наверху */
-  }
-
-  .counter__button_minus-edge {
-    margin-right: auto;
-  }
-
-  .counter__button_minus,
-  .counter__button_plus {
     /* max-width: 110px; Элементы 1 и 5 под 2 и 4 */
-    width: 20%;
+    width: 26%;
   }
 
   .counter__button_rand {
@@ -357,9 +364,21 @@ button {
     width: 35%;
   }
 
+  .counter__button_minus-edge {
+    margin-right: auto;
+  }
+
+  /* .counter__button_minus,
+  .counter__button_plus {
+
+  } */
+
   .button__play {
     margin-top: 40px;
     width: 380px;
+  }
+  .btn {
+    transition: 0.2s opacity;
   }
 }
 @media (max-width: 384px) {

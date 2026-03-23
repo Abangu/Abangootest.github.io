@@ -14,6 +14,7 @@ body {
 
 p {
   padding: 15px 0 15px 0;
+  color: #000;
 }
 
 h1 {
@@ -51,6 +52,8 @@ button {
   justify-content: space-between;
   height: 100px;
   align-items: center;
+
+  background-color: #b6eaff;
 }
 
 .menu__list {
@@ -123,6 +126,12 @@ button {
   font-size: 25px;
   font-weight: 600;
 }
+
+p b span {
+  color: rgb(92, 92, 92);
+  font-size: 24px;
+}
+
 .counter {
   display: flex;
   flex-wrap: wrap; /* Разрешаем перенос */
@@ -282,6 +291,10 @@ button {
 
     /* Запрещает прокрутку, если контент не помещается */
     overflow: hidden;
+  }
+
+  .header__top {
+    background-color: #24b176;
   }
 
   .width__info,

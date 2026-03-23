@@ -2,31 +2,7 @@
 const input = document.getElementById("myInput");
 const myInput = parseInt(document.getElementById("myInput").value) - 1;
 const button = document.getElementById("playBtn");
-
-const display = document.getElementById("output");
 const display1 = document.getElementById("myHeader");
-
-window.addEventListener("load", function () {
-  // Ждем нажатия пользователя, так как браузеры
-  // блокируют авто-блокировку без действия
-  document.body.addEventListener(
-    "click",
-    function () {
-      if (screen.orientation && screen.orientation.lock) {
-        // Блокировка в портретном режиме
-        screen.orientation
-          .lock("portrait")
-          .then(function () {
-            console.log("Ориентация заблокирована");
-          })
-          .catch(function (error) {
-            console.error("Ошибка блокировки:", error);
-          });
-      }
-    },
-    { once: true },
-  ); // Сработает только один раз
-});
 
 function updateWidth() {
   const width = window.innerWidth;
@@ -51,11 +27,11 @@ fetch(filePath)
 
     document.getElementById("myInput").value = 1;
     document.getElementById("lineCount").textContent = " " + maxVal;
-    display.textContent = 1; // Строка: 1
+    // display.textContent = 1; Строка: 1
     display1.textContent = lines[0];
-    document.getElementById("outtest").innerText = filePath;
-    document.getElementById("output1").textContent =
-      "video/" + input.value + ".webm";
+    // document.getElementById("outtest").innerText = filePath;
+    // document.getElementById("output1").textContent =
+    //   "video/" + input.value + ".webm";
   });
 
 // ПОЛУЧЕНИЕ ЗНАЧЕНИЯ СТРОКИ ТЕКСТОВОГО ФАЙЛа
@@ -77,7 +53,7 @@ input.addEventListener("input", async () => {
 
   // Проверка на корректность числа
   if (isNaN(lineNum) || lineNum < 1) {
-    display.textContent = 1;
+    // display.textContent = 1;
     return;
   }
 
@@ -96,17 +72,18 @@ input.addEventListener("input", async () => {
     document.getElementById("lineCount").textContent = " " + maxValue;
     // 3. Получаем строку (индексация в массиве начинается с 0)
     if (lineNum <= lines.length) {
-      display.textContent = lineNum;
+      // display.textContent = lineNum;
       display1.textContent = lines[lineNum - 1];
     } else {
-      display.textContent = maxValue;
+      // display.textContent = maxValue;
       display1.textContent = lines[maxValue - 1];
       document.getElementById("myInput").value = lines.length;
     }
-    document.getElementById("output1").textContent =
-      "video/" + input.value + ".webm";
+    // document.getElementById("output1").textContent =
+    //   "video/" + input.value + ".webm";
   } catch (error) {
-    display.textContent = "Ошибка: " + error.message;
+    display1.textContent = "Ошибка: " + error.message;
+    // display1.textContent = lines[maxValue - 1];
   }
 });
 
@@ -122,11 +99,11 @@ function readLineFirstButton() {
 
       document.getElementById("myInput").value = 1;
       document.getElementById("lineCount").textContent = " " + FmaxVal;
-      display.textContent = 1;
+      // display.textContent = 1;
       display1.textContent = Flines[0];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -143,11 +120,11 @@ function readLinePrevButton() {
       if (myInput < 1) myInput = FmaxVal;
       document.getElementById("myInput").value = myInput;
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
-      display.textContent = myInput;
+      // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -165,11 +142,11 @@ function readLineRandButton() {
       const randomNumber = Math.floor(Math.random() * FmaxVal) + 1;
       document.getElementById("myInput").value = randomNumber;
       document.getElementById("lineCount").textContent = " " + FmaxVal;
-      display.textContent = randomNumber;
+      // display.textContent = randomNumber;
       display1.textContent = Flines[randomNumber - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -186,11 +163,11 @@ function readLineButton() {
       if (myInput > FmaxVal) myInput = 1;
       document.getElementById("myInput").value = myInput;
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
-      display.textContent = myInput;
+      // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 
@@ -206,11 +183,11 @@ function readLineLastButton() {
 
       document.getElementById("myInput").value = FmaxVal;
       document.getElementById("lineCount").textContent = " " + FmaxVal;
-      display.textContent = FmaxVal;
+      // display.textContent = FmaxVal;
       display1.textContent = Flines[FmaxVal - 1];
-      document.getElementById("outtest").innerText = FfilePath;
-      document.getElementById("output1").textContent =
-        "video/" + input.value + ".webm";
+      // document.getElementById("outtest").innerText = FfilePath;
+      // document.getElementById("output1").textContent =
+      //   "video/" + input.value + ".webm";
     });
 }
 

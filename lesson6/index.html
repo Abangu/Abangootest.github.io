@@ -22,10 +22,11 @@
         </div>
         <nav class="menu">
           <ul class="menu__list">
-            <div class="info__check">
-              <p class="width__info" id="width-display">Ширина:</p>
-              <p class="height__info" id="height-display">Высота:</p>
-            </div>
+            <p class="info__check">
+              Урок №<b><span id="outtest"></span></b>
+            </p>
+            <!-- <p class="width__info" id="width-display">Ширина:</p>
+              <p class="height__info" id="height-display">Высота:</p> -->
           </ul>
         </nav>
       </div>
@@ -35,20 +36,20 @@
     <section class="video__chapter">
       <div class="container">
         <div class="operation__field">
-          <div class="video__chapter-play">
+          <div class="header__wrapper">
             <h1 id="myHeader">Просмотр</h1>
-            <div class="video-container">
-              <video
-                id="myVideo"
-                controls
-                width="640"
-                height="360"
-                poster="images/placeholder.jpeg"
-              >
-                <source src="" type="video/webm" />
-                Ваш браузер не поддерживает встроенные видео.
-              </video>
-            </div>
+          </div>
+          <div class="video-container">
+            <video
+              id="myVideo"
+              controls
+              width="640"
+              height="360"
+              poster="images/placeholder.jpeg"
+            >
+              <source src="" type="video/webm" />
+              Ваш браузер не поддерживает встроенные видео.
+            </video>
           </div>
 
           <!-- Блок серфинга -->
@@ -63,8 +64,9 @@
               oninput="readLineInput(this)"
             />
             <p>
-              Из:
-              <span id="lineCount"></span>
+              из:<b>
+                <span id="lineCount"></span>
+              </b>
             </p>
           </div>
 
@@ -88,7 +90,7 @@
 
             <button
               id="rand__button"
-              class="counter__button_rand"
+              class="counter__button counter__button_rand"
               onclick="readLineRandButton()"
             >
               Произвольно
@@ -116,8 +118,8 @@
           </button>
 
           <!-- <div class="info__file">
-            <p id="outtest">Имя файла</p>
-            <p id="output1">0</p>
+            <p id="outtest"></p>
+
           </div> -->
         </div>
       </div>

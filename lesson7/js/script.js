@@ -4,18 +4,24 @@ const myInput = parseInt(document.getElementById("myInput").value) - 1;
 const button = document.getElementById("playBtn");
 const display1 = document.getElementById("myHeader");
 
-function updateWidth() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  document.getElementById("width-display").innerText =
-    "Ширина страницы: " + width + "px";
-  document.getElementById("height-display").innerText =
-    "Высота страницы: " + height + "px";
-}
+// В дочерней странице (child.html)
+window.onload = function () {
+  const data = sessionStorage.getItem("sharedData");
+  document.getElementById("outtest").innerText = data; // Выведет "Секретное сообщение"
+};
 
-// Запускаем при загрузке и при изменении размера
-window.addEventListener("resize", updateWidth);
-updateWidth(); // Первоначальный вызов
+// function updateWidth() {
+//   const width = window.innerWidth;
+//   const height = window.innerHeight;
+//   document.getElementById("width-display").innerText =
+//     "Ширина страницы: " + width + "px";
+//   document.getElementById("height-display").innerText =
+//     "Высота страницы: " + height + "px";
+// }
+
+// // Запускаем при загрузке и при изменении размера
+// window.addEventListener("resize", updateWidth);
+// updateWidth(); // Первоначальный вызов
 
 const filePath = "video/example1.txt";
 fetch(filePath)

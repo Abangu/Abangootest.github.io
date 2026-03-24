@@ -8,16 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     /> -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
       <div class="header__top">
         <div class="logo">
           <a href="#">
-            <img src="images/logo.png" alt="" />
+            <img src="logo.png" alt="" />
           </a>
         </div>
         <nav class="menu">
@@ -39,17 +39,24 @@
           <div class="fields">
             <input
               class="lesson-number"
-              type="text"
+              type="number"
               id="pageName"
               placeholder="Введите номер урока"
+              oninput="difInput(this)"
             />
             <button class="lesson-open" onclick="goToPage()">
               Открыть страницу
             </button>
+            <p class="lesson__count">
+              Уроков:
+              <b>
+                <span id="lessCount"></span>
+              </b>
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

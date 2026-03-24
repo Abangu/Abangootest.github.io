@@ -4,18 +4,24 @@ const myInput = parseInt(document.getElementById("myInput").value) - 1;
 const button = document.getElementById("playBtn");
 const display1 = document.getElementById("myHeader");
 
-function updateWidth() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  document.getElementById("width-display").innerText =
-    "Ширина страницы: " + width + "px";
-  document.getElementById("height-display").innerText =
-    "Высота страницы: " + height + "px";
-}
+// В дочерней странице (child.html)
+window.onload = function () {
+  const data = sessionStorage.getItem("sharedData");
+  document.getElementById("outtest").innerText = data; // Выведет "Секретное сообщение"
+};
 
-// Запускаем при загрузке и при изменении размера
-window.addEventListener("resize", updateWidth);
-updateWidth(); // Первоначальный вызов
+// function updateWidth() {
+//   const width = window.innerWidth;
+//   const height = window.innerHeight;
+//   document.getElementById("width-display").innerText =
+//     "Ширина страницы: " + width + "px";
+//   document.getElementById("height-display").innerText =
+//     "Высота страницы: " + height + "px";
+// }
+
+// // Запускаем при загрузке и при изменении размера
+// window.addEventListener("resize", updateWidth);
+// updateWidth(); // Первоначальный вызов
 
 const filePath = "video/example1.txt";
 fetch(filePath)
@@ -85,6 +91,7 @@ input.addEventListener("input", async () => {
     display1.textContent = "Ошибка: " + error.message;
     // display1.textContent = lines[maxValue - 1];
   }
+  plcHld();
 });
 
 // ПЕРВАЯ КНОПКА
@@ -96,15 +103,12 @@ function readLineFirstButton() {
       // Разбиваем текст по переносам строк и считаем элементы
       const Flines = content.split(/\r\n|\r|\n/);
       let FmaxVal = Flines.length;
-
       document.getElementById("myInput").value = 1;
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = 1;
       display1.textContent = Flines[0];
-      // document.getElementById("outtest").innerText = FfilePath;
-      // document.getElementById("output1").textContent =
-      //   "video/" + input.value + ".webm";
     });
+  plcHld();
 }
 
 // НАЗАД КНОПКА
@@ -122,10 +126,8 @@ function readLinePrevButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
       // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      // document.getElementById("outtest").innerText = FfilePath;
-      // document.getElementById("output1").textContent =
-      //   "video/" + input.value + ".webm";
     });
+  plcHld();
 }
 
 // ПРОИЗВОЛЬНО КНОПКА
@@ -144,10 +146,8 @@ function readLineRandButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = randomNumber;
       display1.textContent = Flines[randomNumber - 1];
-      // document.getElementById("outtest").innerText = FfilePath;
-      // document.getElementById("output1").textContent =
-      //   "video/" + input.value + ".webm";
     });
+  plcHld();
 }
 
 // ВПЕРЁД КНОПКА
@@ -165,10 +165,8 @@ function readLineButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal; // Количество строк:
       // display.textContent = myInput;
       display1.textContent = Flines[myInput - 1];
-      // document.getElementById("outtest").innerText = FfilePath;
-      // document.getElementById("output1").textContent =
-      //   "video/" + input.value + ".webm";
     });
+  plcHld();
 }
 
 // ПОСЛЕДНЯЯ КНОПКА
@@ -185,10 +183,14 @@ function readLineLastButton() {
       document.getElementById("lineCount").textContent = " " + FmaxVal;
       // display.textContent = FmaxVal;
       display1.textContent = Flines[FmaxVal - 1];
-      // document.getElementById("outtest").innerText = FfilePath;
-      // document.getElementById("output1").textContent =
-      //   "video/" + input.value + ".webm";
     });
+  plcHld();
+}
+function plcHld() {
+  var video = document.getElementById("myVideo");
+  video.pause(); // 1. Остановить видео
+  video.setAttribute("poster", "images/placeholder.jpeg");
+  video.load(); // 4. Перезагрузить элемент, чтобы показать постер
 }
 
 button.addEventListener("click", function () {

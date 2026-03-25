@@ -408,6 +408,109 @@ p b span {
     transition: 0.2s opacity;
   }
 }
+
+@media (max-width: 405px) and (min-width: 392px) {
+  html,
+  body {
+    /* Занимает 100% высоты окна браузера */
+    height: 100vh;
+    /* Улучшенный вариант для мобильных (учитывает панели браузера) */
+    height: 100dvh;
+
+    /* Убирает внешние и внутренние отступы по умолчанию */
+    margin: 0;
+    padding: 0;
+
+    /* Запрещает прокрутку, если контент не помещается */
+    overflow: hidden;
+  }
+  .info__check {
+    margin-right: 10px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .header__top {
+    background-color: #697dee;
+  }
+
+  /* .width__info,
+  .height__info {
+    font-size: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+  } */
+
+  .container {
+    max-width: 392px;
+    max-height: 558px;
+    margin-top: auto;
+    background-color: #a2aadb;
+  }
+  .header__wrapper {
+    max-height: 80px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 25px 0 25px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .video-container {
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    margin-top: 5px;
+    width: auto;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .counter__input {
+    margin-top: 20px;
+  }
+
+  .counter {
+    margin-top: 0;
+  }
+
+  .counter__button_minus-edge,
+  .counter__button_plus-edge {
+    order: 1; /* Опускает элементы вниз */
+    /* Перенастройка ширины для мобильных */
+    margin-top: 5px;
+    /* max-width: 115px;Элементы 1 и 5 под 2 и 4 */
+    max-width: 27%; /* Элементы 1 и 5 под 2 и 4 */
+  }
+  .counter__button_minus,
+  .counter__button_rand,
+  .counter__button_plus {
+    order: 0; /* Оставляет наверху */
+  }
+
+  .counter__button_minus-edge {
+    margin-right: auto;
+  }
+
+  .counter__button_minus,
+  .counter__button_plus {
+    /* max-width: 110px; Элементы 1 и 5 под 2 и 4 */
+    width: 22%;
+  }
+
+  .counter__button_rand {
+    /* max-width: 125px; */
+    width: 29%;
+  }
+
+  .button__play {
+    margin-top: 25px;
+    width: 100%;
+  }
+}
 @media (max-width: 384px) {
   html,
   body {
